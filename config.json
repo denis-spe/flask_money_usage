@@ -1,0 +1,5 @@
+{
+  "TESTING": false,
+  "SQLALCHEMY_DATABASE_URI": "mysql://root:ILoveGod@localhost/flask_money_usage",
+  "SECRET_KEY": "hsHfu662g2geiw8287wuwuwuw61762829t3iwgeuwyqhqie83yehauw7"
+}
