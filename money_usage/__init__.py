@@ -1,10 +1,12 @@
 """
 Flask application factory.
 """
+
 # Import libraries.
 import json
 from flask import Flask
-from money_usage.models.model import db
+from .models.model import db
+from .blueprints.money_usage.views import mt_bp
 
 
 def create_app(test_config=None) -> Flask:
@@ -29,5 +31,8 @@ def create_app(test_config=None) -> Flask:
     # Create tables.
     with app.app_context():
         db.create_all()
+
+    # Register the blueprints.
+    app.register_blueprint(mt_bp)
 
     return app
